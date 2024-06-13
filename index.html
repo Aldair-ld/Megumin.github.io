@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MEGUMIN - BOT</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background: #000;
+            color: #fff;
+        }
+        header {
+            background: white;
+            color: black;
+            text-align: center;
+            padding: 20px;
+        }
+        
+        nav {
+            background: #333;
+            color: white;
+            padding: 10px;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+        }
+        nav ul li {
+            position: relative;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            display: block;
+        }
+        nav ul li a:hover {
+            background: #575757;
+        }
+        nav ul ul {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background: #333;
+            padding: 0;
+        }
+        nav ul ul li {
+            width: 200px;
+        }
+        nav ul li:hover > ul {
+            display: block;
+        }
+        .menu-toggle {
+            display: none;
+            padding: 10px 20px;
+            background: #333;
+            color: white;
+            text-align: center;
+            cursor: pointer;
+        }
+        .menu-toggle:hover {
+            background: #575757;
+        }
+        section {
+            padding: 20px;
+            margin: 10px;
+            background: #000;
+        }
+        .cta-button, .demo-button, .help-center-link {
+            display: inline-block;
+            padding: 10px 20px;
+            margin: 10px 0;
+            background: #1eb9cb;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        .cta-button:hover, .demo-button:hover, .help-center-link:hover {
+            background: #1eb9cb;
+        }
+        .testimonials blockquote {
+            background: #222;
+            border-left: 10px solid #575757;
+            margin: 1.5em 10px;
+            padding: 0.5em 10px;
+            quotes: "\201C""\201D""\2018""\2019";
+            color: #fff;
+        }
+        .testimonials blockquote:before {
+            color: #575757;
+            content: open-quote;
+            font-size: 4em;
+            line-height: 0.1em;
+            margin-right: 0.25em;
+            vertical-align: -0.4em;
+        }
+        .testimonials blockquote p {
+            display: inline;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            background: #000;
+        }
+        form label, form input, form textarea {
+            margin: 10px 0;
+            color: #fff;
+        }
+        form input, form textarea {
+            background: #222;
+            border: 1px solid #575757;
+            color: #fff;
+        }
+        form button {
+            padding: 10px;
+            background: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+        }
+        form button:hover {
+            background: #45a049;
+        }
+        @media (min-width: 768px) {
+            nav ul {
+                flex-direction: row;
+                justify-content: space-around;
+            }
+            nav ul ul {
+                position: absolute;
+            }
+        }
+        @media (max-width: 767px) {
+            .menu-toggle {
+                display: block;
+            }
+            nav ul {
+                display: none;
+                flex-direction: column;
+            }
+            nav ul li {
+                width: 100%;
+            }
+            nav ul ul {
+                position: static;
+            }
+            nav ul.showing {
+                display: flex;
+            }
+        }
+    </style>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            var menuToggle = document.querySelector('.menu-toggle');
+            var navUl = document.querySelector('nav ul');
+
+            menuToggle.addEventListener('click', function () {
+                navUl.classList.toggle('showing');
+            });
+        });
+    </script>
+</head>
+<body>
+
+    <header>
+        <h1>Bienvenido a MEGUMIN - BOT</h1>
+        <p>El mejor bot de WhatsApp.</p>
+        <a href="https://wa.me/51973846456?text=.menu" class="demo-button">Numero del bot OFC</a>
+    </header>
+
+    <nav>
+        <div class="menu-toggle">Menú</div>
+        <ul>
+                    <li><a href="#caracteristicas">Características Principales</a></li>
+                    <li><a href="#como-funciona">Cómo Funciona</a></li>
+                    <li><a href="#soporte">Soporte</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+
+    <section id="caracteristicas">
+        <h2>Características Principales</h2>
+        <p>Descubre todo lo que nuestro bot de WhatsApp puede hacer por ti:</p>
+        <ul>
+            <li>Responde preguntas frecuentes automáticamente.</li>
+            <li>Proporciona soporte al cliente 24/7.</li>
+            <li>Descarga musica y videos con un solo comando </li>
+        </ul>
+    </section>
+
+    <section id="como-funciona">
+        <h2>Funcion para ser subot</h2>
+        <p>Registrate despues de averte registrado con el comando .reg1 nombre edad ve el siguiente video</p>
+        <ol>
+            <li> Ve al principio y presiona en el numero del bot</li>
+            <li>Manda .serbot --code</li>
+            <li>Te enviara una guia y un codigo</li>
+            <li>Vinculalo y ya seras subot</li>
+        </ol>
+        
+        <h2>Video Tutorial</h2>
+        <div style="text-align: center; max-width: 100%; overflow: hidden;">
+            <video controls style="max-width: 60%; height: auto;">
+                <source src="vid/guia.mp4" type="video/mp4">
+                Tu navegador no soporta la etiqueta de video.
+            </video>
+        </div>
+    
+                <section id="soporte">
+                    <h2>Soporte</h2>
+                    <p>Si necesitas ayuda presionar en el siguiente boton y te llevara al contacto del creador del bot</p>
+                    <a href="https://wa.me/51925015528" class="cta-button">ALDAIR</a>
+                    </form>
+                </section>
+            
+            </body>
+            </html>
+            
